@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Mobile Devices Support @begin -->
+    <meta content="application/xhtml+xml;charset=UTF-8" http-equiv="Content-Type">
+    <meta content="no-cache,must-revalidate" http-equiv="Cache-Control">
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="0" http-equiv="expires">
+    <meta content="telephone=no, address=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" /> <!-- apple devices fullscreen -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Mobile Devices Support @end -->
+    <title>捡书</title>
+    <!--<link href="css/index.css" type="text/css" rel="stylesheet"/>-->
+    <link href="css/grad.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="container">
+      <div id="leafContainer"></div>
+</div>
+<div class="txt timeTxt">倒计时：<span class="countTime">30</span>秒</div>
+<div class="txt">捡到：<span class="num">0</span>本</div>
+
+<div class="black_bg"></div>
+<div class="tips_b1">
+    <p>上万本图书从天而降，<br/>捡到的都归你~<br/>点击图书封面，就可以捡到。</p>
+    <button class="grad_btn" onclick="gradBook(10)">开始捡书</button>
+</div>
+<div class="tips_b2 hide">
+    <p></p>
+    <a href="myGradBook.html">查看捡到的书></a>
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="js/leaves.js"></script>
+<script type="text/javascript" src="js/grad.js"></script>
+</body>
+</html>

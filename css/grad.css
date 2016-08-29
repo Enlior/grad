@@ -1,0 +1,78 @@
+body,ul,ol,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,img,div{margin:0px;padding:0px;border:0px;}
+body{font-family: "微软雅黑";font-size:62.5%; background-color: #ffffff; margin: 0; padding: 0; }
+html,body{width:100%;height:100%;}
+a:link,a:visited,a:hover,a:active {color: #000;text-decoration: none;}
+.clearfix{clear:both;}
+.hide{ display: none;}
+
+#container { position: relative; min-width: 320px; min-height: 480px; width: 100%; height: 100%; background: url("../images/grad_bg.jpg"); background-size: 100% 100%; margin: 0 auto; overflow: hidden; }
+#leafContainer{ position: absolute; width: 100%; height: 100%; }
+#leafContainer > div {
+    position: absolute;
+    width: 65px;
+    height: 80px;
+    -webkit-animation-iteration-count: infinite, infinite;
+    -webkit-animation-direction: normal, normal;
+    -webkit-animation-timing-function: linear, ease-in; }
+
+#leafContainer > div > img {
+     position: absolute;
+     width: 65px;
+     height: auto;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+     -webkit-animation-timing-function: ease-in-out;
+     -webkit-transform-origin: 50% -100%;
+}
+
+.txt{ position: absolute; bottom: 10px; right: 10px;font-family: "微软雅黑"; font-size: 1.4em; color: #ffffff; background: #FF9933; padding: 5px 20px; border: 0; -o-border-radius:20px; -webkit-border-radius: 20px; -moz-border-radius: 20px;  -ms-border-radius: 20px; }
+.timeTxt{ position: absolute; bottom: 10px; right: 120px;}
+.tips{ position: absolute; top: 45%; left: 50%; margin-left: -45px; display: none; color: #ff0000; font-size: 18px; }
+
+.black_bg{width: 100%; height: 100%; background: #000; opacity: 0.5; filter:alpha(opacity=50); position: fixed; top: 0; left: 0;}
+.tips_b1{ position: absolute; top: 35%; left: 50%; margin-left: -100px; text-align: center;}
+.tips_b1 p{ text-align: center; width: 200px; font-size: 1.4em; line-height: 1.6em; color: #ffffff;}
+.tips_b1 button{ font-family: "微软雅黑"; color: #ffffff; background: #FF9933; padding: 8px 0; width: 200px; border: 0; -o-border-radius:20px; -webkit-border-radius: 20px; -moz-border-radius: 20px;  -ms-border-radius: 20px; outline: none;}
+
+.tips_b2{position: absolute; top: 35%; left: 50%;text-align: center; background: #FF9933; padding:15px; margin-left: -90px; border: 0; -o-border-radius:8px; -webkit-border-radius: 8px; -moz-border-radius:8px;  -ms-border-radius: 8px;}
+.tips_b2 p{ text-align: center; width: 150px; font-size: 1.4em; color: #ffffff;}
+.tips_b2 a{ float: right; color: #2896fa; font-size: 1.4em; }
+
+/* Hides a leaf towards the very end of the animation */
+@-webkit-keyframes fade
+{
+    /* Show a leaf while into or below 95 percent of the animation and hide it, otherwise */
+    0%   { opacity: 1; }
+    95%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+
+/* Makes a leaf fall from -300 to 600 pixels in the y-axis */
+@-webkit-keyframes drop
+{
+    /* Move a leaf to -300 pixels in the y-axis at the start of the animation */
+    0%   { -webkit-transform: translate(0px, -50px); }
+    /* Move a leaf to 600 pixels in the y-axis at the end of the animation */
+    100% { -webkit-transform: translate(0px, 650px); }
+}
+
+/* Rotates a leaf from -50 to 50 degrees in 2D space */
+@-webkit-keyframes clockwiseSpin
+{
+    /* Rotate a leaf by -50 degrees in 2D space at the start of the animation */
+    0%   { -webkit-transform: rotate(-50deg); }
+    /*  Rotate a leaf by 50 degrees in 2D space at the end of the animation */
+    100% { -webkit-transform: rotate(50deg); }
+}
+
+
+/* Flips a leaf and rotates it from 50 to -50 degrees in 2D space */
+@-webkit-keyframes counterclockwiseSpinAndFlip 
+{
+    /* Flip a leaf and rotate it by 50 degrees in 2D space at the start of the animation */
+    0%   { -webkit-transform: scale(-1, 1) rotate(50deg); }
+    /* Flip a leaf and rotate it by -50 degrees in 2D space at the end of the animation */
+    100% { -webkit-transform: scale(-1, 1) rotate(-50deg); }
+}
+
